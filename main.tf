@@ -7,6 +7,7 @@ resource "aws_instance" "example" {
   instance_type = "t2.micro"
   count         = 2
   key_name = "tfServer"
+  subnet_id = "subnet-0f2a2938171e5f462"
   vpc_security_group_ids = [ "sg-0454b7e51120799e6" ]
 
   tags = {
