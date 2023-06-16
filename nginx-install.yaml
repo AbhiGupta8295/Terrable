@@ -1,19 +1,15 @@
 ---
 - name: Install Nginx
-  hosts: all
+  hosts: target  #same name to be specified in the inventory file hosts.ini
   become: true
   tasks:
-    - name: Update apt cache
-      apt:
-        update_cache: yes
-
     - name: Install Nginx
       apt:
         name: nginx
         state: present
 
-    # - name: Start Nginx service
-    #   service:
-    #     name: nginx
-    #     state: started
-    #     enabled: yes
+    - name: Start Nginx service
+      service:
+        name: nginx
+        state: started
+        enabled: yes
