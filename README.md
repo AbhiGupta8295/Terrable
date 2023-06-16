@@ -10,4 +10,5 @@ Using terraform to provision instances and ansible for configuration
 5.Run:
 ansible-playbook -i hosts.ini nginx-install.yaml
 
+Note: try to mention subnet_id , key_pair and security_group_id in main.tf file same as master node.
 </pre>
